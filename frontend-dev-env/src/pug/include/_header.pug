@@ -1,0 +1,24 @@
+doctype html
+block vars
+html(lang="ja" itemscope="itemscope" itemtype="http://schema.org/WebPage")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="description" content="description")
+    meta(name="twitter:url" content="site_url")
+    link(rel="stylesheet" href=assets_dir + "/css/style.css")
+    title #{page}| SITE NAME
+  body
+    div.wrapper#wrapper
+      if key != 'print'
+        header.header
+          div.container
+            h1
+              #{page}
+            ul
+              li
+                a(href="/page") page
+      block contents
+      if key != 'print'
+        include _footer.pug

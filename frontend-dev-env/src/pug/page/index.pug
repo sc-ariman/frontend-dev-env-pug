@@ -1,0 +1,10 @@
+extends ../include/_header.pug
+
+block vars
+  include ../include/_config.pug
+  - var key  = common.page.key
+  - var page = common.page.title
+
+block contents
+  main.contents.contents--page
+    |lower page

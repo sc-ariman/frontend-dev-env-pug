@@ -1,0 +1,9 @@
+extends ./include/_header.pug
+
+block vars
+  include ./include/_config.pug
+  - var key  = common.index.key
+  - var page = common.index.title
+
+block contents
+  |index page

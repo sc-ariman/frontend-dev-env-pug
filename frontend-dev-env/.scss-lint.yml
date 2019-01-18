@@ -1,0 +1,209 @@
+linters:
+  # !の前後に不適切なスペースがある時に警告
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  # border: noneではなくborder: 0を使うようにするか
+  BorderZero:
+    enabled: false
+    convention: 'none'
+
+  # 16進カラーコードを使うようにするか
+  ColorKeyword:
+    enabled: true
+
+  # 色の指定を変数でしか許可しないようにするか
+  ColorVariable:
+    enabled: true
+
+  # /* ... */ではなく//を使うようにするか
+  Comment:
+    enabled: false
+
+  # @debugが残ってないか
+  DebugStatement:
+    enabled: true
+
+  # @extend宣言、内部@contentのない宣言、プロパティ、内部@contentを含む@include宣言、次にネストされたルールセットの順に並べる必要があるか
+  DeclarationOrder:
+    enabled: false
+
+  # プロパティが重複していないか
+  DuplicateProperty:
+    enabled: true
+
+  # @elseの前後の波括弧で改行しないか
+  ElsePlacement:
+    enabled: true
+    style: same_line
+
+  # ブロックの前に１行あけるかどうか
+  EmptyLineBetweenBlocks:
+    enabled: true
+    ignore_single_line_blocks: true
+
+  # EmptyRule
+  EmptyRule:
+    enabled: false
+
+  # ファイルの最後の行が空行になっているか
+  FinalNewline:
+    enabled: true
+    present: true
+
+  # 16進カラーコードを短縮して書くことができるとき、短縮するか、しないか
+  HexLength:
+    enabled: true
+    style: short
+
+  # 16進カラーコードが小文字で記述されているか
+  HexNotation:
+    enabled: true
+    style: lowercase
+
+  # 16進カラーコードが３桁か６桁であること
+  HexValidation:
+    enabled: true
+
+  # IDセレクタを使用しない
+  IdSelector:
+    enabled: true
+
+  # ImportantRule
+  ImportantRule:
+    enabled: true
+
+  # @importを使用するとき、_始まりにしないことと拡張子を含めないこと
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  # 1インデント2スペースで
+  Indentation:
+    enabled: true
+    #  allow_non_nested_indentation: true
+    character: space
+    width: 4
+
+  # 0始まりの小数点の値は、0を省略する
+  LeadingZero:
+    enabled: true
+    style: exclude_zero
+
+  # セレクタを重複して記述していないか
+  MergeableSelector:
+    enabled: true
+    force_nesting: true
+
+  # 関数、ミックスイン、変数はハイフンつなぎの小文字で名前をつける
+  NameFormat:
+    enabled: false
+    allow_leading_underscore: false
+    convention: BEM
+
+  # 深すぎるネストを避ける
+  NestingDepth:
+    enabled: true
+    max_depth: 8
+
+  # @extendのセレクタは常にプレースホルダーを利用する
+  PlaceholderInExtend:
+    enabled: true
+
+  # ルールセットの中のプロパティの数を制限する
+  PropertyCount:
+    enabled: true
+    included_nested: false
+    max_properties: 8
+
+  # 厳密にプロパティの順番を決める。デフォルトはアルファベット順。
+  PropertySortOrder:
+    enabled: false
+
+  # 存在しないプロパティを使用しているか
+  PropertySpelling:
+    enabled: true
+
+  # セレクタの命名規則
+  SelectorFormat:
+    enabled: false
+    convention: classic_BEM # or 'hyphenated_lowercase', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  # 可能な限りショートハンドで
+  Shorthand:
+    enabled: true
+
+  # １行につき１つのプロパティで
+  SingleLinePerProperty:
+    enabled: true
+
+  # １行につき１つのセレクタで
+  SingleLinePerSelector:
+    enabled: true
+
+  # カンマの直後に必ずスペースを入れる
+  SpaceAfterCommna:
+    enabled: true
+
+  # プロパティのあとのコロンの直後にいれるスペース
+  SpaceAfterPropertyColon:
+    enabled: true
+
+  # プロパティとコロンの間にスペースを入れない
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # 波括弧の前に１つスペースを入れる
+  SpaceBeforeBrace:
+    enabled: true
+
+  # 丸括弧の前後にスペースを入れない
+  SpaceBetweenParens:
+    enabled: true
+
+  # 文字列をシングルクォーテーションで囲う。エスケープせずにすませるためにダブルクォーテーションを使うのは許容。
+  StringQuotes:
+    enabled: false
+
+  # 末尾にセミコロンをつける
+  TrailingSemicolon:
+    enabled: true
+
+  # 小数点以下に不要な０を入れない
+  TrailingZero:
+    enabled: true
+
+  # 不要な小数点をつけない
+  UnnecessaryManitissa:
+    enabled: true
+
+  # 親要素の参照が不要なときに&を使わない
+  UnnecessaryParentReference:
+    enabled: true
+
+  # urlにプロトコルやドメインを含めない
+  UrlFormat:
+    enabled: true
+
+  # urlを常にクォーテーションで囲う
+  UrlQuotes:
+    enabled: false
+
+  # 特定のプロパティの値を変数でもつこと
+  VariableForProperty:
+    enabled: true
+    properties:
+      - font-size
+
+  # ベンダープレフィックスを記述しない。autoprefixerやmixinから付与する
+  VendorPrefix:
+    enabled: true
+
+  # 0に単位をつけない
+  ZeroUnit:
+    enabled: true
+
+# Japanese referrer : https://github.com/makotot/scss-lint-example
